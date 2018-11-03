@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Haoxiang&apos;s Blog">
+<meta name="description" content="Vue中export default与export的区别 在ES6中导入模块，使用   import 模块名称 from ‘模块标识符’  在 ES6 中，使用 export default 和 export 向外暴露成员：  export default只允许向外暴露一次 export可以向外暴露多个成员 使用 export 导出的成员，必须严格按照 导出时候的名称，来使用  { }  按需接收">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇博客">
-<meta property="og:url" content="http://yoursite.com/2018/11/03/我的第一篇博客/index.html">
-<meta property="og:site_name" content="孤岛">
-<meta property="og:description" content="Haoxiang&apos;s Blog">
+<meta property="og:title" content="Vue中export default与export的区别">
+<meta property="og:url" content="http://yoursite.com/2018/11/03/Vue中export default与export的区别/index.html">
+<meta property="og:site_name" content="苦昼短">
+<meta property="og:description" content="Vue中export default与export的区别 在ES6中导入模块，使用   import 模块名称 from ‘模块标识符’  在 ES6 中，使用 export default 和 export 向外暴露成员：  export default只允许向外暴露一次 export可以向外暴露多个成员 使用 export 导出的成员，必须严格按照 导出时候的名称，来使用  { }  按需接收">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-03T05:01:29.353Z">
+<meta property="og:updated_time" content="2018-11-03T05:27:56.615Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的第一篇博客">
-<meta name="twitter:description" content="Haoxiang&apos;s Blog">
+<meta name="twitter:title" content="Vue中export default与export的区别">
+<meta name="twitter:description" content="Vue中export default与export的区别 在ES6中导入模块，使用   import 模块名称 from ‘模块标识符’  在 ES6 中，使用 export default 和 export 向外暴露成员：  export default只允许向外暴露一次 export可以向外暴露多个成员 使用 export 导出的成员，必须严格按照 导出时候的名称，来使用  { }  按需接收">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/03/我的第一篇博客/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/03/Vue中export default与export的区别/">
 
 
 
 
 
-  <title>我的第一篇博客 | 孤岛</title>
+  <title>Vue中export default与export的区别 | 苦昼短</title>
   
 
 
@@ -155,12 +155,12 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">孤岛</span>
+        <span class="site-title">苦昼短</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
       
-        <p class="site-subtitle">世间所有的相遇,都是久别重逢</p>
+        <p class="site-subtitle">谈花饮月赋闲，这春宵艳阳天</p>
       
   </div>
 
@@ -262,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/03/我的第一篇博客/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/03/Vue中export default与export的区别/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="黄浩翔">
@@ -271,7 +271,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="孤岛">
+      <meta itemprop="name" content="苦昼短">
     </span>
 
     
@@ -279,7 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">我的第一篇博客</h1>
+          <h1 class="post-title" itemprop="name headline">Vue中export default与export的区别</h1>
         
 
         <div class="post-meta">
@@ -329,7 +329,16 @@
       
 
       
-        
+        <h4 id="Vue中export-default与export的区别"><a href="#Vue中export-default与export的区别" class="headerlink" title="Vue中export default与export的区别"></a>Vue中export default与export的区别</h4><ul>
+<li>在ES6中导入模块，使用   import 模块名称 from ‘模块标识符’ </li>
+<li>在 ES6 中，使用 export default 和 export 向外暴露成员： </li>
+<li>export default只允许向外暴露一次</li>
+<li>export可以向外暴露多个成员</li>
+<li>使用 export 导出的成员，必须严格按照 导出时候的名称，来使用  { }  按需接收，不需要，可以不在{}中定义 </li>
+<li>在一个模块中，可以同时使用export default和export暴露成员</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> &lt;script&gt;</span><br><span class="line">    // 注意：在 .vue 的组件中，通过 script 标签来定义组件的行为，需要使用 ES6 中提供的 export default 方式，导出一个vue实例对象</span><br><span class="line">    export default &#123;</span><br><span class="line">      data() &#123;</span><br><span class="line">        return &#123;</span><br><span class="line">          msg: &apos;OK&apos;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;    </span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -397,13 +406,22 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
               <p class="site-author-name" itemprop="name">黄浩翔</p>
-              <p class="site-description motion-element" itemprop="description">Haoxiang's Blog</p>
+              <p class="site-description motion-element" itemprop="description">Edward's Blog</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -440,6 +458,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Vue中export-default与export的区别"><span class="nav-number">1.</span> <span class="nav-text">Vue中export default与export的区别</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
