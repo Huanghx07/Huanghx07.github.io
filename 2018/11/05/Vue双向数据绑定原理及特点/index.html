@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="Vue中export default与export的区别 在ES6中导入模块，使用   import 模块名称 from ‘模块标识符’  在 ES6 中，使用 export default 和 export 向外暴露成员：  export default只允许向外暴露一次 export可以向外暴露多个成员 使用 export 导出的成员，必须严格按照 导出时候的名称，来使用  { }  按需接收">
+<meta name="description" content="原理：    利用Object.defineProperty()这个方法重新定义对象获取属性值（get）和设置属性值（set）的操作实现的特点：v-model指令只能作用在表单元素上  1234567891011121314151617181920212223242526272829303132333435&amp;lt;body&amp;gt;	&amp;lt;!-- vue双向数据绑定的原理 --&amp;gt;   &amp;l">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue中export default与export的区别">
-<meta property="og:url" content="http://yoursite.com/2018/11/03/Vue中export default与export的区别/index.html">
+<meta property="og:title" content="Vue双向数据绑定原理及特点">
+<meta property="og:url" content="http://yoursite.com/2018/11/05/Vue双向数据绑定原理及特点/index.html">
 <meta property="og:site_name" content="苦昼短">
-<meta property="og:description" content="Vue中export default与export的区别 在ES6中导入模块，使用   import 模块名称 from ‘模块标识符’  在 ES6 中，使用 export default 和 export 向外暴露成员：  export default只允许向外暴露一次 export可以向外暴露多个成员 使用 export 导出的成员，必须严格按照 导出时候的名称，来使用  { }  按需接收">
+<meta property="og:description" content="原理：    利用Object.defineProperty()这个方法重新定义对象获取属性值（get）和设置属性值（set）的操作实现的特点：v-model指令只能作用在表单元素上  1234567891011121314151617181920212223242526272829303132333435&amp;lt;body&amp;gt;	&amp;lt;!-- vue双向数据绑定的原理 --&amp;gt;   &amp;l">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-03T05:27:56.615Z">
+<meta property="og:updated_time" content="2018-11-05T06:26:05.814Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue中export default与export的区别">
-<meta name="twitter:description" content="Vue中export default与export的区别 在ES6中导入模块，使用   import 模块名称 from ‘模块标识符’  在 ES6 中，使用 export default 和 export 向外暴露成员：  export default只允许向外暴露一次 export可以向外暴露多个成员 使用 export 导出的成员，必须严格按照 导出时候的名称，来使用  { }  按需接收">
+<meta name="twitter:title" content="Vue双向数据绑定原理及特点">
+<meta name="twitter:description" content="原理：    利用Object.defineProperty()这个方法重新定义对象获取属性值（get）和设置属性值（set）的操作实现的特点：v-model指令只能作用在表单元素上  1234567891011121314151617181920212223242526272829303132333435&amp;lt;body&amp;gt;	&amp;lt;!-- vue双向数据绑定的原理 --&amp;gt;   &amp;l">
 
 
 
@@ -119,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/11/03/Vue中export default与export的区别/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/05/Vue双向数据绑定原理及特点/">
 
 
 
 
 
-  <title>Vue中export default与export的区别 | 苦昼短</title>
+  <title>Vue双向数据绑定原理及特点 | 苦昼短</title>
   
 
 
@@ -262,7 +262,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/03/Vue中export default与export的区别/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/05/Vue双向数据绑定原理及特点/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="黄浩翔">
@@ -279,7 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Vue中export default与export的区别</h1>
+          <h1 class="post-title" itemprop="name headline">Vue双向数据绑定原理及特点</h1>
         
 
         <div class="post-meta">
@@ -291,8 +291,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-03T13:01:29+08:00">
-                2018-11-03
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-11-05T14:23:13+08:00">
+                2018-11-05
               </time>
             
 
@@ -329,15 +329,10 @@
       
 
       
-        <h4 id="Vue中export-default与export的区别"><a href="#Vue中export-default与export的区别" class="headerlink" title="Vue中export default与export的区别"></a>Vue中export default与export的区别</h4><ul>
-<li>在ES6中导入模块，使用   import 模块名称 from ‘模块标识符’ </li>
-<li>在 ES6 中，使用 export default 和 export 向外暴露成员： </li>
-<li>export default只允许向外暴露一次</li>
-<li>export可以向外暴露多个成员</li>
-<li>使用 export 导出的成员，必须严格按照 导出时候的名称，来使用  { }  按需接收，不需要，可以不在{}中定义 </li>
-<li>在一个模块中，可以同时使用export default和export暴露成员</li>
+        <ul>
+<li>原理：    利用Object.defineProperty()这个方法重新定义对象获取属性值（get）和设置属性值（set）的操作实现的特点：v-model指令只能作用在表单元素上</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> &lt;script&gt;</span><br><span class="line">    // 注意：在 .vue 的组件中，通过 script 标签来定义组件的行为，需要使用 ES6 中提供的 export default 方式，导出一个vue实例对象</span><br><span class="line">    export default &#123;</span><br><span class="line">      data() &#123;</span><br><span class="line">        return &#123;</span><br><span class="line">          msg: &apos;OK&apos;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;    </span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;!-- vue双向数据绑定的原理 --&gt;</span><br><span class="line">   &lt;input type=<span class="string">"text"</span> id=<span class="string">"myInput"</span>&gt;</span><br><span class="line">   &lt;span id=<span class="string">"mySpan"</span> &gt;<span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"> &lt;<span class="regexp">/body&gt;  </span></span><br><span class="line"><span class="regexp">   &lt;script&gt;</span></span><br><span class="line"><span class="regexp">       var data = &#123;</span></span><br><span class="line"><span class="regexp">           msg:'哈哈哈哈哈'</span></span><br><span class="line"><span class="regexp">       &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">       myInput.value = data.msg;</span></span><br><span class="line"><span class="regexp">       mySpan.innerText = data.msg;</span></span><br><span class="line"><span class="regexp">       </span></span><br><span class="line"><span class="regexp">       /</span><span class="regexp">/ VUE中双向数据绑定的原理 就是 Object.defineProperty</span></span><br><span class="line"><span class="regexp">       /</span><span class="regexp">/ 参数1 对象</span></span><br><span class="line"><span class="regexp">       /</span><span class="regexp">/ 参数2 对象中需要定义的属性</span></span><br><span class="line"><span class="regexp">       /</span><span class="regexp">/ 参数3 该属性的一些配置</span></span><br><span class="line"><span class="regexp">       Object.defineProperty(data,'msg',&#123;</span></span><br><span class="line"><span class="regexp">           get:function()&#123;</span></span><br><span class="line"><span class="regexp">               return myInput.value;</span></span><br><span class="line"><span class="regexp">           &#125;,</span></span><br><span class="line"><span class="regexp">           set:function(newValue)&#123;</span></span><br><span class="line"><span class="regexp">               myInput.value = newValue;</span></span><br><span class="line"><span class="regexp">               mySpan.innerText = newValue;</span></span><br><span class="line"><span class="regexp">           &#125;</span></span><br><span class="line"><span class="regexp">       &#125;)</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">       myInput.onkeyup = function()&#123;</span></span><br><span class="line"><span class="regexp">           data.msg = this.value;</span></span><br><span class="line"><span class="regexp">           console.log(data.msg)</span></span><br><span class="line"><span class="regexp">       &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">       /</span><span class="regexp">/ var str = data.msg /</span><span class="regexp">/ 读取msg的值 ----&gt; get</span></span><br><span class="line"><span class="regexp">       /</span><span class="regexp">/ data.msg = xxxx /</span><span class="regexp">/ 设置msg的值 -----&gt; set</span></span><br><span class="line"><span class="regexp">   &lt;/</span>script&gt;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -362,15 +357,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/11/04/笔记/" rel="next" title="笔记">
+                <i class="fa fa-chevron-left"></i> 笔记
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/04/笔记/" rel="prev" title="笔记">
-                笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -422,17 +417,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -474,22 +460,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Vue中export-default与export的区别"><span class="nav-number">1.</span> <span class="nav-text">Vue中export default与export的区别</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
