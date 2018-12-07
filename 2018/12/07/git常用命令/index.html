@@ -108,20 +108,24 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="南风歌">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="什么是Git? Git是一款源代码管理工具(版本控制工具) 我们写的代码需要使用Git进行管理。   源代码有必要管理起吗？ 1.0 2.0 //  svn,vss,vcs…. git 有必要，因为人工的去处理不同的版本，做相应备份会很麻烦。 Git是linux之父当年为了维护linux—linus之前也是手动维护合并把文件发给Linus linus自己写了一个版本管理的工具(Git) 可以把gi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git常用命令">
+<meta property="og:url" content="http://yoursite.com/2018/12/07/git常用命令/index.html">
 <meta property="og:site_name" content="南风歌">
+<meta property="og:description" content="什么是Git? Git是一款源代码管理工具(版本控制工具) 我们写的代码需要使用Git进行管理。   源代码有必要管理起吗？ 1.0 2.0 //  svn,vss,vcs…. git 有必要，因为人工的去处理不同的版本，做相应备份会很麻烦。 Git是linux之父当年为了维护linux—linus之前也是手动维护合并把文件发给Linus linus自己写了一个版本管理的工具(Git) 可以把gi">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-12-07T03:31:51.681Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="南风歌">
+<meta name="twitter:title" content="git常用命令">
+<meta name="twitter:description" content="什么是Git? Git是一款源代码管理工具(版本控制工具) 我们写的代码需要使用Git进行管理。   源代码有必要管理起吗？ 1.0 2.0 //  svn,vss,vcs…. git 有必要，因为人工的去处理不同的版本，做相应备份会很麻烦。 Git是linux之父当年为了维护linux—linus之前也是手动维护合并把文件发给Linus linus自己写了一个版本管理的工具(Git) 可以把gi">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2018/12/07/git常用命令/">
 
 
 
@@ -131,7 +135,7 @@
   };
 </script>
 
-  <title>南风歌</title>
+  <title>git常用命令 | 南风歌</title>
   
 
 
@@ -180,8 +184,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -222,7 +225,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -364,9 +367,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -398,10 +401,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/12/07/git常用命令/" class="post-title-link" itemprop="http://yoursite.com/index.html">git常用命令</a>
+          <h1 class="post-title" itemprop="name headline">git常用命令
               
             
           </h1>
@@ -460,30 +460,157 @@
       
 
       
-        
-          
-          什么是Git?
-Git是一款源代码管理工具(版本控制工具)
-我们写的代码需要使用Git进行管理。
+        <h2 id="什么是Git"><a href="#什么是Git" class="headerlink" title="什么是Git?"></a>什么是Git?</h2><ul>
+<li>Git是一款源代码管理工具(版本控制工具)<ul>
+<li>我们写的代码需要使用Git进行管理。</li>
+</ul>
+</li>
+<li>源代码有必要管理起吗？</li>
+<li>1.0</li>
+<li>2.0 // </li>
+<li>svn,vss,vcs…. git</li>
+<li>有必要，因为人工的去处理不同的版本，做相应备份会很麻烦。</li>
+<li>Git是linux之父当年为了维护linux—linus之前也是手动维护合并把文件发给Linus</li>
+<li>linus自己写了一个版本管理的工具(Git)</li>
+<li>可以把git理解为一个管理代码的管理员</li>
+<li>但是我需要把代码交给git管理（也就是把代码跟git做关联）</li>
+<li>git init 初始化一个git的仓储 意味着当前的这个文件夹里面所有的代码内容都会受到git的管理 在这个项目文件夹中做的添加 修改 删除 等操作 都会在git的仓储中有记录 万一什么时候需要代码回滚 或者 回滚到指定版本</li>
+</ul>
+<h2 id="Git安装"><a href="#Git安装" class="headerlink" title="Git安装"></a>Git安装</h2><h2 id="初始化Git仓储-仓库"><a href="#初始化Git仓储-仓库" class="headerlink" title="初始化Git仓储/(仓库)"></a>初始化Git仓储/(仓库)</h2><ul>
+<li>这个仓库会存放，git对我们项目代码进行备份的文件</li>
+<li>在项目目录右键打开 git bash</li>
+<li>命令: <code>git init</code></li>
+</ul>
+<h2 id="自报家门"><a href="#自报家门" class="headerlink" title="自报家门"></a>自报家门</h2><ul>
+<li>就是在git中设置当前使用的用户是谁</li>
+<li>每一次备份都会把当前备份者的信息存储起来</li>
+<li>命令: <ul>
+<li>配置用户名:<code>git config --global user.name &quot;xiaoming&quot;</code></li>
+<li>配置邮箱:  <code>git config --global user.email &quot;xm@sina.com&quot;</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="把大象放到冰箱要几步"><a href="#把大象放到冰箱要几步" class="headerlink" title="把大象放到冰箱要几步"></a>把大象放到冰箱要几步</h2><ol>
+<li>打开冰箱门</li>
+<li>放大象</li>
+<li>关上冰箱</li>
+</ol>
+<h2 id="把代码存储到-git仓储中"><a href="#把代码存储到-git仓储中" class="headerlink" title="把代码存储到.git仓储中"></a>把代码存储到.git仓储中</h2><ul>
+<li>1.把代码放到仓储的门口 暂存区<ul>
+<li><code>git add ./readme.md</code> 所指定的文件放到大门口</li>
+<li><code>git add ./</code> 把所有的修改的文件添加到大门口</li>
+</ul>
+</li>
+<li>2.把仓储门口的代码放到里面的房间中去 仓储<ul>
+<li><code>git commit -m &quot;这是对这次添加的东西的说明&quot;</code></li>
+<li>git commit –all 直接放进去 新增的文件 不会提交到仓储中</li>
+</ul>
+</li>
+</ul>
+<h2 id="可以一次性把我们修改的代码放到房间里-版本库"><a href="#可以一次性把我们修改的代码放到房间里-版本库" class="headerlink" title="可以一次性把我们修改的代码放到房间里(版本库)"></a>可以一次性把我们修改的代码放到房间里(版本库)</h2><ul>
+<li><code>git commit --all -m &quot;一些说明&quot;</code><ul>
+<li>–all 表示是把所有修改的文件提交到版本库</li>
+</ul>
+</li>
+</ul>
+<h2 id="查看当前的状态"><a href="#查看当前的状态" class="headerlink" title="查看当前的状态"></a>查看当前的状态</h2><ul>
+<li>可以用来查看当前代码有没有被放到仓储中去</li>
+<li>命令: <code>git status</code></li>
+</ul>
+<h2 id="git中的忽略文件"><a href="#git中的忽略文件" class="headerlink" title="git中的忽略文件"></a>git中的忽略文件</h2><ul>
+<li><p>.gitignore,在这个文件中可以设置要被忽略的文件或者目录。</p>
+</li>
+<li><p>被忽略的文件不会被提交仓储里去.</p>
+</li>
+<li><p>在.gitignore中可以书写要被忽略的文件的路径，以/开头，<br>一行写一个路径，这些路径所对应的文件都会被忽略，<br>不会被提交到仓储中</p>
+<ul>
+<li><p>写法</p>
+<ul>
+<li><p><code>/.idea</code> 会忽略.idea文件</p>
+</li>
+<li><p><code>/js</code>      会忽略js目录里的所有文件</p>
+</li>
+<li><p><code>/js/*.js</code> 会忽略js目录下所有js文件</p>
+<p>.gitignore中增加了过滤规则但是不起作用的情况。多半是由于在创建.gitignore文件或添加一些过滤规则之前就track了相应的内容，那么即使在.gitignore文件中写入新的过滤规则，这些规则也不会起作用，Git仍然会对这些文件进行版本管理。简单来说出现这种问题的原因就是Git已经开始管理这些文件了，所以你无法再通过过滤规则过滤它们。<br>这个时候解决方法就是先把本地这些文件变成未track状态，具体来说就是在缓存里删除它们，然后提交：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git rm -r --cached .</span><br><span class="line">git add .</span><br><span class="line">git commit -m &apos;update .gitignore&apos;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h2><ul>
+<li><code>git log</code> 查看历史提交的日志</li>
+<li><code>git log --oneline</code> 可以看到简洁版的日志</li>
+</ul>
+<h2 id="回退到指定的版本"><a href="#回退到指定的版本" class="headerlink" title="回退到指定的版本"></a>回退到指定的版本</h2><ul>
+<li><code>git reset --hard Head~0</code><ul>
+<li>表示回退到上一次代码提交时的状态</li>
+</ul>
+</li>
+<li><code>git reset --hard Head~1</code><ul>
+<li>表示回退到上上次代码提交时的状态</li>
+</ul>
+</li>
+<li><code>git reset --hard [版本号]</code><ul>
+<li>可以通过版本号精确的回退到某一次提交时的状态</li>
+</ul>
+</li>
+<li><code>git reflog</code><ul>
+<li>可以看到每一次切换版本的记录:可以看到所有提交的版本号</li>
+</ul>
+</li>
+</ul>
+<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><ul>
+<li>默认是有一个主分支master</li>
+</ul>
+<h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><ul>
+<li><code>git branch dev</code><ul>
+<li>创建了一个dev分支</li>
+<li>在刚创建时dev分支里的东西和master分支里的东西是一样的</li>
+</ul>
+</li>
+</ul>
+<h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><ul>
+<li><code>git checkout dev</code><ul>
+<li>切换到指定的分支,这里的切换到名为dev的分支<br><code>git branch</code> 可以查看当前有哪些分支</li>
+</ul>
+</li>
+</ul>
+<h3 id="合并分支"><a href="#合并分支" class="headerlink" title="合并分支"></a>合并分支</h3><ul>
+<li><code>git merge dev</code><ul>
+<li>合并分支内容,把当前分支与指定的分支(dev),进行合并</li>
+<li>当前分支指的是<code>git branch</code>命令输出的前面有*号的分支</li>
+</ul>
+</li>
+<li>合并时如果有冲突，需要手动去处理，处理后还需要再提交一次.</li>
+</ul>
+<h3 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h3><ul>
+<li><a href="https://github.com" target="_blank" rel="noopener">https://github.com</a></li>
+<li>不是git,只是一个网站</li>
+<li>只不过这个网站提供了允许别通过git上传代码的功能</li>
+</ul>
+<h3 id="提交代码到github-当作git服务器来用"><a href="#提交代码到github-当作git服务器来用" class="headerlink" title="提交代码到github(当作git服务器来用)"></a>提交代码到github(当作git服务器来用)</h3><ul>
+<li><p><code>git push [地址] master</code></p>
+</li>
+<li><p>示例: <code>git push https://github.com/huoqishi/test112.git master  master</code></p>
+</li>
+<li><p>会把当前分支的内容上传到远程的master分支上</p>
+</li>
+<li><p><code>git pull [地址] master</code></p>
+</li>
+<li><p>示例: <code>git pull https://github.com/huoqishi/test112.git master</code></p>
+</li>
+<li><p>会把远程分支的数据得到:(<em>注意本地-要初始一个仓储!</em>)</p>
+</li>
+<li><p><code>git clone [地址]</code></p>
+</li>
+<li><p>会得到远程仓储相同的数据,如果多次执行会覆盖本地内容。</p>
+</li>
+</ul>
+<p>如果本地没有git仓储 直接把服务器的仓储拿下来 就用clone </p>
+<p>如果本地已经有仓储了并且要跟服务器下载下来的代码做合并 就用pull</p>
 
-
-源代码有必要管理起吗？
-1.0
-2.0 // 
-svn,vss,vcs…. git
-有必要，因为人工的去处理不同的版本，做相应备份会很麻烦。
-Git是linux之父当年为了维护linux—linus
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/12/07/git常用命令/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
       
     </div>
 
@@ -506,158 +633,28 @@ Git是linux之父当年为了维护linux—linus
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/21/父组件向子组件传值/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Author">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="南风歌">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/11/21/父组件向子组件传值/" class="post-title-link" itemprop="http://yoursite.com/index.html">父组件向子组件传值</a>
-              
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
+              <a href="/2018/11/21/父组件向子组件传值/" rel="next" title="父组件向子组件传值">
+                <i class="fa fa-chevron-left"></i> 父组件向子组件传值
+              </a>
             
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-21 17:12:46" itemprop="dateCreated datePublished" datetime="2018-11-21T17:12:46+08:00">2018-11-21</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          123456789101112131415161718192021222324252627282930313233343536373839&lt;body&gt;    &lt;!-- 父组件控制的区域，引入子组件 --&gt;    &lt;div id="app"&gt;        &lt;
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/11/21/父组件向子组件传值/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -667,1073 +664,15 @@ Git是linux之父当年为了维护linux—linus
   </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/20/ES6-Promise/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Author">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="南风歌">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/11/20/ES6-Promise/" class="post-title-link" itemprop="http://yoursite.com/index.html">ES6-Promise</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-20 12:47:07" itemprop="dateCreated datePublished" datetime="2018-11-20T12:47:07+08:00">2018-11-20</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Promise概念:
-Promise 是一个构造函数，既然是构造函数，那么我们就可以new Promise()得到一个 Promise 的实例；
-在 Promise 上，有两个函数，分别叫做 resolve（成功之后的回调函数）和reject（失败之后的回调函数）
-在 Promise 构造函数的 P
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/11/20/ES6-Promise/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/18/Vue全家桶/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Author">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="南风歌">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/11/18/Vue全家桶/" class="post-title-link" itemprop="http://yoursite.com/index.html">Vue全家桶</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-18 21:50:22" itemprop="dateCreated datePublished" datetime="2018-11-18T21:50:22+08:00">2018-11-18</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          vue全家桶vue-router
-vue的路由
-安装： npm i vue-router
-引用方式：
-标签引用
-模块化引用
-Vue.use(router)
-在根组件注册路由
-render：
-组件的渲染方式；
-缺点：会替换div#app
-
-
-
-
-
-
-
-vue-resource
-作用：vue中发送htt
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/11/18/Vue全家桶/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/13/Vuex和父子组件之间传值/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Author">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="南风歌">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/11/13/Vuex和父子组件之间传值/" class="post-title-link" itemprop="http://yoursite.com/index.html">Vuex和父子组件之间传值</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-13 22:46:30" itemprop="dateCreated datePublished" datetime="2018-11-13T22:46:30+08:00">2018-11-13</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          父组件向子组件传值
-父组件向子组件传递属性
-
-父组件向子组件传递属性， 使用 props 属性
-父组件定义属性
-123456789import A from &apos;@/components/A&apos;export default &#123;    data () &#123;      
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/11/13/Vuex和父子组件之间传值/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/13/Js动态计算rem适配移动端/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Author">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="南风歌">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/11/13/Js动态计算rem适配移动端/" class="post-title-link" itemprop="http://yoursite.com/index.html">Js动态计算rem适配移动端</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-13 22:43:13" itemprop="dateCreated datePublished" datetime="2018-11-13T22:43:13+08:00">2018-11-13</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
-在head标签中引入下面的js,后面直接用rem作为单位`javascript(function(doc, win) {  var docEl = doc.documentElement,resizeEvt =
-    &apos;orientationchange&apos; in window
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/11/13/Js动态计算rem适配移动端/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/05/Vue双向数据绑定原理及特点/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Author">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="南风歌">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/11/05/Vue双向数据绑定原理及特点/" class="post-title-link" itemprop="http://yoursite.com/index.html">Vue双向数据绑定原理及特点</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-05 14:23:13" itemprop="dateCreated datePublished" datetime="2018-11-05T14:23:13+08:00">2018-11-05</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
-原理：利用Object.defineProperty()这个方法重新定义对象获取属性值（get）和设置属性值（set）的操作实现的。
-特点：v-model指令只能作用在表单元素上
-
-1234567891011121314151617181920212223242526272829303132333
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/11/05/Vue双向数据绑定原理及特点/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/04/Note/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Author">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="南风歌">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/11/04/Note/" class="post-title-link" itemprop="http://yoursite.com/index.html">Note</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-04 10:56:06" itemprop="dateCreated datePublished" datetime="2018-11-04T10:56:06+08:00">2018-11-04</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          JS123456789101112+ sort排序var num=[10,4,78,2,70]function sortNumber(a,b)&#123;    return a-b;&#125;console.log(num.sort(sortNumber))//a-b是升序 b-a是降序+ re
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/11/04/Note/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/03/Vue中export default与export的区别/">
-
-    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Author">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="南风歌">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2018/11/03/Vue中export default与export的区别/" class="post-title-link" itemprop="http://yoursite.com/index.html">Vue中export default与export的区别</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2018-11-03 13:01:29" itemprop="dateCreated datePublished" datetime="2018-11-03T13:01:29+08:00">2018-11-03</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Vue中export default与export的区别
-在ES6中导入模块，使用   import 模块名称 from ‘模块标识符’ 
-在 ES6 中，使用 export default 和 export 向外暴露成员： 
-export default只允许向外暴露一次
-export可以向外暴露
-          ...
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2018/11/03/Vue中export default与export的区别/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-       
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -1754,8 +693,17 @@ export可以向外暴露
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -1825,6 +773,22 @@ export可以向外暴露
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是Git"><span class="nav-number">1.</span> <span class="nav-text">什么是Git?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Git安装"><span class="nav-number">2.</span> <span class="nav-text">Git安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化Git仓储-仓库"><span class="nav-number">3.</span> <span class="nav-text">初始化Git仓储/(仓库)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自报家门"><span class="nav-number">4.</span> <span class="nav-text">自报家门</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#把大象放到冰箱要几步"><span class="nav-number">5.</span> <span class="nav-text">把大象放到冰箱要几步</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#把代码存储到-git仓储中"><span class="nav-number">6.</span> <span class="nav-text">把代码存储到.git仓储中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可以一次性把我们修改的代码放到房间里-版本库"><span class="nav-number">7.</span> <span class="nav-text">可以一次性把我们修改的代码放到房间里(版本库)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看当前的状态"><span class="nav-number">8.</span> <span class="nav-text">查看当前的状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git中的忽略文件"><span class="nav-number">9.</span> <span class="nav-text">git中的忽略文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查看日志"><span class="nav-number">10.</span> <span class="nav-text">查看日志</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#回退到指定的版本"><span class="nav-number">11.</span> <span class="nav-text">回退到指定的版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支"><span class="nav-number">12.</span> <span class="nav-text">分支</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建分支"><span class="nav-number">12.1.</span> <span class="nav-text">创建分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#切换分支"><span class="nav-number">12.2.</span> <span class="nav-text">切换分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合并分支"><span class="nav-number">12.3.</span> <span class="nav-text">合并分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GitHub"><span class="nav-number">12.4.</span> <span class="nav-text">GitHub</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提交代码到github-当作git服务器来用"><span class="nav-number">12.5.</span> <span class="nav-text">提交代码到github(当作git服务器来用)</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1962,6 +926,10 @@ export可以向外暴露
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
 
   
 
