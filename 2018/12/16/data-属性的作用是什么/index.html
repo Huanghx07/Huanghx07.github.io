@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="南风歌">
 <meta property="og:description" content="HTML5规范里增加了一个自定义data属性. 为前端开发者提供自定义的属性，这些属性集可以通过对象的dataset属性获取，不支持该属性的浏览器可以通过 getAttribute方法获取  注意：data-之后的以连字符分割的多个单词组成的属性，获取的时候使用驼峰风格 1234 &amp;lt;div id=&quot;content&quot; data-user-list=&quot;user_list&quot;&amp;gt;data-use">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-12-16T05:24:23.951Z">
+<meta property="og:updated_time" content="2018-12-16T05:26:23.292Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="data-属性的作用是什么">
 <meta name="twitter:description" content="HTML5规范里增加了一个自定义data属性. 为前端开发者提供自定义的属性，这些属性集可以通过对象的dataset属性获取，不支持该属性的浏览器可以通过 getAttribute方法获取  注意：data-之后的以连字符分割的多个单词组成的属性，获取的时候使用驼峰风格 1234 &amp;lt;div id=&quot;content&quot; data-user-list=&quot;user_list&quot;&amp;gt;data-use">
@@ -465,23 +465,11 @@
 <li><p>注意：data-之后的以连字符分割的多个单词组成的属性，获取的时候使用驼峰风格</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> &lt;div id=<span class="string">"content"</span> data-user-list=<span class="string">"user_list"</span>&gt;data-user_list自定义属性 &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp"> </span></span><br><span class="line"><span class="regexp">var content= document.getElementById('content');</span></span><br><span class="line"><span class="regexp">alert(content.dataset.userList)</span></span><br></pre></td></tr></table></figure>
 <ul>
-<li>通过js方式给data- 设置值<br><code>`</code>javascript<div id="content" data-user-list="user_list">data-user_list自定义属性 </div>
-
+<li>通过js方式给data- 设置值<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">"content"</span> data-user-list=<span class="string">"user_list"</span>&gt;data-user_list自定义属性 &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/js</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">var content= document.getElementById('content');</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">content.dataset.name='我叫tom'</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">alert(content.dataset.name)</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/jquery</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">$('#content').data('name','我叫tom');/</span><span class="regexp">/写 4</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">getAttribute/</span>setAttribute方法的使用</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> content= <span class="built_in">document</span>.getElementById(<span class="string">'content'</span>);        </span><br><span class="line"></span><br><span class="line">content.dataset.birthDate = <span class="string">'19990619'</span>;        </span><br><span class="line"></span><br><span class="line">content.setAttribute(<span class="string">'age'</span>, <span class="number">25</span>);       </span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(content.getAttribute(<span class="string">'data-age'</span>)); <span class="comment">//25       </span></span><br><span class="line"><span class="built_in">console</span>.log(content.getAttribute(<span class="string">'data-birth-date'</span>));<span class="comment">//19990519</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 </ul>
-<p>//js</p>
-<p>var content= document.getElementById(‘content’);</p>
-<p>content.dataset.name=’我叫tom’</p>
-<p>alert(content.dataset.name)</p>
-<p>//jquery</p>
-<p>$(‘#content’).data(‘name’,’我叫tom’);//写 4</p>
-<p>getAttribute/setAttribute方法的使用</p>
-<p>var content= document.getElementById(‘content’);        </p>
-<p>content.dataset.birthDate = ‘19990619’;        </p>
-<p>content.setAttribute(‘age’, 25);       </p>
-<p>console.log(content.getAttribute(‘data-age’)); //25<br>console.log(content.getAttribute(‘data-birth-date’));//19990519 </p>
 
       
     </div>
